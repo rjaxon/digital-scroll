@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Digital Scroll</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style-mobile.css">
+
+    <script type="text/javascript" src="./scripts/views/BaseView.js"></script>
+    <script type="text/javascript" src="./scripts/views/Books.js"></script>
+    <script type="text/javascript" src="./scripts/views/Chapters.js"></script>
+    <script type="text/javascript" src="./scripts/views/GridButtons.js"></script>
+    <script type="text/javascript" src="./scripts/views/Home.js"></script>
+    <script type="text/javascript" src="./scripts/views/Title.js"></script>
+    <script type="text/javascript" src="./scripts/views/BookText.js"></script>
+    <script type="text/javascript" src="./scripts/data.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/ui.js"></script>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body onload="ui.onload();">
+    <header class="hidden">
+        <h1></h1>
+    </header>
+
+    <div class="container center">
+        <div id="grid-buttons" class="button-grid hidden">
+            <button type="button" id="grid-button-1" class="grid-button">Back</button>
+            <button type="button" id="grid-button-2" class="grid-button">Cancel</button>
+            <button type="button" id="grid-button-3" class="grid-button hidden">Button 3</button>
+            <button type="button" id="grid-button-4" class="grid-button hidden">Button 4</button>
+            <button type="button" id="grid-button-5" class="grid-button hidden">Button 5</button>
+            <button type="button" id="grid-button-6" class="grid-button hidden">Button 6</button>
+        </div>
+
+
+        <h1 id="title">Main Content Title</h1>
+
+        <div id="grid-home" class="tile-grid hidden">
+            <div class="tile" data-value="Old Testament">Old Testament</div>
+            <div class="tile" data-value="New Testament">New Testament</div>
+        </div>
+
+
+        <div id="grid-books" class="hidden">
+            <div id="grid-books-old-testament" class="tile-grid hidden">
+
+            </div>
+
+            <div id="grid-books-new-testament" class="tile-grid hidden">
+
+            </div>
+            <!--<div class="tile">Genesis</div>
+            <div class="tile">Exodus</div>
+            <div class="tile">Leviticus</div>-->
+        </div>
+
+        <div id="grid-book-chapters" class="tile-grid hidden">
+            <!--<div class="tile">Genesis</div>
+            <div class="tile">Exodus</div>
+            <div class="tile">Leviticus</div>-->
+        </div>
+
+        <div id="book-text" class="hidden">
+        </div>
+
+        <!--<div class="content">
+            <h1>Another Section</h1>
+            <p>Nulla facilisi. Nam vitae tincidunt eros. Sed laoreet feugiat tortor, a tincidunt risus interdum et. Donec luctus lectus ut neque congue, vel fermentum odio scelerisque.</p>
+        </div>-->
+    </div>
+
+    <footer class="hidden">
+        <p></p>
+    </footer>
+    <div id="pseudo-console"></div>
+
+
+    <script type="text/javascript">
+
+        function log(text) {
+            console.log(text);
+
+            let pseudoConsole = document.getElementById('pseudo-console');
+            if (pseudoConsole) {
+                pseudoConsole.appendChild(document.createTextNode(text));
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+/* Mobile-first styling */
+@media (max-width: 600px) {
+    header {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
+
+/* Tablets and larger devices */
+@media (min-width: 601px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .content {
+        padding: 30px;
+    }
+}
